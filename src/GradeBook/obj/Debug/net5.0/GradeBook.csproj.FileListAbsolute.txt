@@ -1,0 +1,15 @@
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/bin/Debug/net5.0/GradeBook.deps.json
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/bin/Debug/net5.0/GradeBook.runtimeconfig.json
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/bin/Debug/net5.0/GradeBook.runtimeconfig.dev.json
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/bin/Debug/net5.0/GradeBook.dll
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/bin/Debug/net5.0/ref/GradeBook.dll
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/bin/Debug/net5.0/GradeBook.pdb
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.csproj.AssemblyReference.cache
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.GeneratedMSBuildEditorConfig.editorconfig
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.AssemblyInfoInputs.cache
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.AssemblyInfo.cs
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.csproj.CoreCompileInputs.cache
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.dll
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/ref/GradeBook.dll
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.pdb
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/src/GradeBook/obj/Debug/net5.0/GradeBook.genruntimeconfig.cache
