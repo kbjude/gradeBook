@@ -26,7 +26,7 @@ namespace GradeBook
             result = total / grades.Count;
 
 
-            Console.WriteLine($"This is my average {result}");
+            Console.WriteLine($"This is my average {result:N1}");
 
 
             if(args.Length > 0)
