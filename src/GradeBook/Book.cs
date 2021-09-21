@@ -1,0 +1,8 @@
+namespace GradeBook
+{
+    class Book
+    {
+        
+    }
+
+}
