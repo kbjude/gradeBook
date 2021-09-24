@@ -5945,7 +5945,7 @@
       "outputPath": "/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/apple/.config/NuGet/NuGet.Config"
+        "/Users/apple/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

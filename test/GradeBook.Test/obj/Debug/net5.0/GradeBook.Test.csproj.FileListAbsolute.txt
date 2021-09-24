@@ -98,3 +98,8 @@
 /Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/obj/Debug/net5.0/GradeBook.Test.pdb
 /Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/obj/Debug/net5.0/GradeBook.Test.genruntimeconfig.cache
 /Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/bin/Debug/net5.0/CoverletSourceRootsMapping
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/bin/Debug/net5.0/GradeBook.deps.json
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/bin/Debug/net5.0/GradeBook.runtimeconfig.json
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/bin/Debug/net5.0/GradeBook.runtimeconfig.dev.json
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/bin/Debug/net5.0/GradeBook.dll
+/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/bin/Debug/net5.0/GradeBook.pdb
