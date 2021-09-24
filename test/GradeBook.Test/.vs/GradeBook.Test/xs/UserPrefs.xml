@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{34910810-A313-4FD2-BD1E-8D26B5D7B329}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BookTest.cs">
+    <Files>
+      <File FileName="BookTest.cs" Line="15" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GradeBook.Test" expanded="True">
+            <Node name="GradeBook.Test" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="BookTest.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="GradeBook.Test" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.GradeBook.Test PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <RunToCursorBreakpoint file="/Users/apple/www/projects/innovationvillage/learning/dotnet/gradebook/test/GradeBook.Test/BookTest.cs" relfile="BookTest.cs" line="11" column="30" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

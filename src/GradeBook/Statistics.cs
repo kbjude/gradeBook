@@ -3,8 +3,8 @@ namespace GradeBook
 {
     public class Statistics
     {
-        public Statistics()
-        {
-        }
+        public double Average;
+        public double High;
+        public double Low;
     }
 }

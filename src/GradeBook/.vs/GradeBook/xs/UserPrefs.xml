@@ -1,20 +1,18 @@
 ﻿<Properties StartupConfiguration="{52238540-9A66-4782-AA6B-83DA2B5C057F}|Default">
   <MonoDevelop.Ide.ItemProperties.GradeBook PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Statistics.cs">
-    <Files>
-      <File FileName="Program.cs" Line="9" Column="22" />
-      <File FileName="Book.cs" Line="18" Column="24" />
-      <File FileName="Statistics.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GradeBook" expanded="True">
             <Node name="GradeBook" expanded="True">
-              <Node name="Statistics.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
