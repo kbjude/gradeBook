@@ -5,10 +5,62 @@ namespace GradeBook.Test
 {
     public class TypeTest
     {
+
+        [Fact]
+        public void Test2()
+        {
+            var x = Getint();
+            SetInt(ref x);
+
+
+            Assert.Equal(3, x);
+
+            //arrange(PAssing parameter by value... taking the value in one variable and placing it in another parameter)
+
+            //act
+
+            //assert
+
+        }
+
+        private void SetInt(ref int z)
+        {
+            z = 44;
+        }
+
+        private int Getint()
+        {
+            return 3;
+        }
+
+
         [Fact]
         public void Test1()
         {
-            //arrange
+            //arrange(PAssing parameter by value... taking the value in one variable and placing it in another parameter)
+
+            var book1 = GetBook("Book 1");
+            GetBookSetName(book1, "New Name");
+
+            Assert.Equal("Book 1", book1.Name);
+
+            //act
+
+            //assert
+
+        }
+
+        private void GetBookSetName(Book book, string name)
+        {
+            book = new Book(name);
+            book.Name = name;
+        }
+
+
+        [Fact]
+        public void CanSetBookNameFromReference()
+        {
+            //arrange(PAssing parameter by value... taking the value in one variable and placing it in another parameter)
 
             var book1 = GetBook("Book 1");
             SetName(book1, "New Name");
