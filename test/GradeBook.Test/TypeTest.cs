@@ -73,7 +73,7 @@ namespace GradeBook.Test
         [Fact]
         public void CanSetBookNameFromReference()
         {
-            //arrange(PAssing parameter by value... taking the value in one variable and placing it in another parameter)
+            //arrange(Passing parameter by value... taking the value in one variable and placing it in another parameter)
 
             var book1 = GetBook("Book 1");
             SetName(book1, "New Name");
