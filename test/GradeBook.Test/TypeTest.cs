@@ -5,6 +5,19 @@ namespace GradeBook.Test
 {
     public class TypeTest
     {
+        [Fact]
+        public void StringBehaveLikeValueTypes()
+        {
+            string name = "Scott";
+            var upper = MakeUppercase(name);
+
+            Assert.Equal("SCOTT", upper);
+        }
+
+        private string MakeUppercase(string parameter)
+        {
+            return parameter.ToUpper();
+        }
 
         [Fact]
         public void Test2()
@@ -13,7 +26,7 @@ namespace GradeBook.Test
             SetInt(ref x);
 
 
-            Assert.Equal(3, x);
+            Assert.Equal(44, x);
 
             //arrange(PAssing parameter by value... taking the value in one variable and placing it in another parameter)
 
