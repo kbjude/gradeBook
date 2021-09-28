@@ -3,12 +3,27 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    public class Book
+    public delegate void GradeAddDelegate(object sender, EventArgs args);
+
+    public class NamedObject
     {
-        public delegate void GradeAddDelegate(object sender, EventArgs args);
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
 
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
 
-        public Book(string name)
+    // Inheriting from the base class namedobject named object should be in another file
+    public class Book : NamedObject
+    {
+        //passing the arguments from the base class and picking them from where they are parsed
+        public Book(string name) : base(name)
         {
             Name = name;
             grades = new List<double>();
@@ -130,13 +145,13 @@ namespace GradeBook
         private string name;
          */
 
-        public string Name
-        {
-            get;
+        //public string Name
+        //{
+        //    get;
 
-            //Encapsuation happening with the word private. It is being made a read only.
-            set;
-        }
+        //    //Encapsuation happening with the word private. It is being made a read only.
+        //    set;
+        //}
 
         //Cant be changes apart from in the constructor.
         //readonly string category = "Science";
