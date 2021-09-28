@@ -129,7 +129,11 @@ namespace GradeBook
             private set;
         }
 
-        readonly string category = "Science";
+        //Cant be changes apart from in the constructor.
+        //readonly string category = "Science";
+
+        //This cant even be changed in the constructor;
+        public const string CATEGORY = "Science";
 
     }
 

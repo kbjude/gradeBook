@@ -37,8 +37,10 @@ namespace GradeBook
 
 
             var stats = book.GetStatistics();
+            // book.Name = ""; This will be used when the setter is not set to private for the user to change it. This field has been made readonly
 
-
+            Console.WriteLine($"For the book named {book.Name}");
+            Console.WriteLine($"Category for the book is {Book.CATEGORY}");
             Console.WriteLine($"This is my average {stats.Average:N1}");
             Console.WriteLine($"This is the lowest grade {stats.Low:N1}");
             Console.WriteLine($"This is the highest grade {stats.High:N1}");
