@@ -9,7 +9,7 @@ namespace GradeBook.Test
         public void Test1()
         {
             //arrange
-            var book = new Book("");
+            var book = new InMemoryBook("");
             book.AddGrade(89.8);
             book.AddGrade(77.6);
             book.AddGrade(56.8);
@@ -24,6 +24,7 @@ namespace GradeBook.Test
             Assert.Equal(67.4, result.Average, 1);
             Assert.Equal(89.8, result.High, 1);
             Assert.Equal(45.6, result.Low, 1);
+            Assert.Equal('C', result.Letter);
         }
     }
 }

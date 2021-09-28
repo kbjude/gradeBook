@@ -1,21 +1,135 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace GradeBook
 {
-    public class Book
+    public delegate void GradeAddDelegate(object sender, EventArgs args);
+
+    public class NamedObject
     {
-        public Book(string name)
-            {
-            this.name = name;
-            grades = new List<double>();
-            }
-        public void AddGrade(double grade)
+        public NamedObject(string name)
         {
-            grades.Add(grade); 
+            Name = name;
         }
 
-        public Statistics GetStatistics()
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+
+    public interface IBook
+    {
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name { get; }
+        event GradeAddDelegate GradeAdded;
+    }
+    //When implemetning an interface, you have to have its members in methods of your class. 
+    public abstract class Book : NamedObject, IBook
+    {
+        public Book(string name) : base(name)
+        {
+
+        }
+
+        public abstract event GradeAddDelegate GradeAdded;
+
+        public abstract void AddGrade(double grade);
+
+        public abstract Statistics GetStatistics();
+    }
+
+    public class DiskBook : Book
+    {
+        public DiskBook(string name) : base(name)
+        {
+        }
+
+        public override event GradeAddDelegate GradeAdded;
+
+        public override void AddGrade(double grade)
+        {
+            //Using is used when you want to close the connection/ gabbage collect as soon as you are done with what it is upposed to do.
+            using (var writer = File.AppendText($"{Name}.txt"))
+            {
+                writer.WriteLine(grade);
+                if(GradeAdded !=null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
+            }
+        }
+
+        public override Statistics GetStatistics()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    // Inheriting from the base class namedobject named object should be in another file but we can add an interface
+    // but if i want it in every book component, then i have to move it to the book class definition
+    public class InMemoryBook : Book
+    {
+        //passing the arguments from the base class and picking them from where they are parsed
+        public InMemoryBook(string name) : base(name)
+        {
+            Name = name;
+            grades = new List<double>();
+        }
+
+        public void AddLetterGrade(char letter)
+        {
+            switch(letter)
+            {
+                case 'A':
+
+                    break;
+
+                case 'B':
+
+                    AddGrade(80);
+                    break;
+
+                case 'C':
+                    AddGrade(70);
+                    break;
+
+                case 'D':
+                        AddGrade(60);
+                        break;
+
+                default:
+                    
+                       AddGrade(0);
+                       break;
+                    
+            }
+        }
+
+        //Override will overide every addgrade attributes in other classes
+        public override void AddGrade(double grade)
+        {
+            if (grade <=100 && grade >= 0)
+            {
+                grades.Add(grade);
+                if(GradeAdded !=null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
+            }
+            else
+            {
+                throw new ArgumentException($"Invalid Grade {nameof(grade)}");
+            }
+        }
+
+        //Adding a new memeber which is just a field
+        public override event GradeAddDelegate GradeAdded;
+
+        public override Statistics GetStatistics()
         {
             var result = new Statistics();
             result.Average = 0.0;
@@ -30,10 +144,72 @@ namespace GradeBook
             }
 
             result.Average /= grades.Count;
+
+            switch(result.Average)
+            {
+                case var d when d >= 90.0:
+                    result.Letter = 'A';
+                    break;
+
+                case var d when d >= 80.0:
+                    result.Letter = 'B';
+                    break;
+
+                case var d when d >= 60.0:
+                    result.Letter = 'C';
+                    break;
+
+                case var d when d >= 90.0:
+                    result.Letter = 'D';
+                    break;
+                default:
+                    result.Letter = 'F';
+                    break;
+            }
+
             return result;
         }
         List <double> grades;
-        string name;
+
+        /*
+        public string Name
+        {
+            
+                this is the same as get; set;
+                Check on the book for some thing like this
+                get;
+                private set;
+            
+            get
+
+            {
+                return name;
+            }
+            set
+            {
+                //This value comes from the programm value
+                if(!String.IsNullOrEmpty(value))
+                {
+                    name = value;
+                }
+            }
+        }
+        private string name;
+         */
+
+        //public string Name
+        //{
+        //    get;
+
+        //    //Encapsuation happening with the word private. It is being made a read only.
+        //    set;
+        //}
+
+        //Cant be changes apart from in the constructor.
+        //readonly string category = "Science";
+
+        //This cant even be changed in the constructor;
+        public const string CATEGORY = "Science";
     }
 
 }
