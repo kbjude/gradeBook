@@ -125,8 +125,8 @@ namespace GradeBook
         {
             get;
 
-            //Encapsuation happening. It is being made a read only.
-            private set;
+            //Encapsuation happening with the word private. It is being made a read only.
+            set;
         }
 
         //Cant be changes apart from in the constructor.
