@@ -2,9 +2,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="src/GradeBook/Program.cs">
     <Files>
       <File FileName="src/GradeBook/Book.cs" Line="18" Column="1" />
-      <File FileName="test/GradeBook.Test/BookTest.cs" Line="19" Column="1" />
-      <File FileName="src/GradeBook/Statistics.cs" Line="10" Column="2" />
-      <File FileName="test/GradeBook.Test/TypeTest.cs" Line="76" Column="25" />
+      <File FileName="test/GradeBook.Test/BookTest.cs" />
+      <File FileName="src/GradeBook/Statistics.cs" />
+      <File FileName="test/GradeBook.Test/TypeTest.cs" />
       <File FileName="src/GradeBook/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>

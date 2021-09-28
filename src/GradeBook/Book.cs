@@ -5,6 +5,12 @@ namespace GradeBook
 {
     public class Book
     {
+        public Book(string name)
+        {
+            Name = name;
+            grades = new List<double>();
+        }
+
         public void AddLetterGrade(char letter)
         {
             switch(letter)
@@ -35,11 +41,6 @@ namespace GradeBook
             }
         }
 
-        public Book(string name)
-            {
-            Name = name;
-            grades = new List<double>();
-            }
         public void AddGrade(double grade)
         {
             if (grade <=100 && grade >= 0)
@@ -48,7 +49,7 @@ namespace GradeBook
             }
             else
             {
-                Console.WriteLine("Invalid Value");
+                throw new ArgumentException($"Invalid Grade {nameof(grade)}");
             }
         }
 
@@ -93,7 +94,43 @@ namespace GradeBook
             return result;
         }
         List <double> grades;
-        public string Name;
+
+        /*
+        public string Name
+        {
+            
+                this is the same as get; set;
+                Check on the book for some thing like this
+                get;
+                private set;
+            
+            get
+
+            {
+                return name;
+            }
+            set
+            {
+                //This value comes from the programm value
+                if(!String.IsNullOrEmpty(value))
+                {
+                    name = value;
+                }
+            }
+        }
+        private string name;
+         */
+
+        public string Name
+        {
+            get;
+
+            //Encapsuation happening. It is being made a read only.
+            private set;
+        }
+
+        readonly string category = "Science";
+
     }
 
 }
