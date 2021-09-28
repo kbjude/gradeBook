@@ -19,11 +19,37 @@ namespace GradeBook
         }
     }
 
-    // Inheriting from the base class namedobject named object should be in another file
-    public class Book : NamedObject
+    public interface IBook
+    {
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name { get; }
+        event GradeAddDelegate GradeAdded;
+    }
+    //When implemetning an interface, you have to have its members in methods of your class. 
+    public abstract class Book : NamedObject, IBook
+    {
+        public Book(string name) : base(name)
+        {
+
+        }
+
+        public virtual event GradeAddDelegate GradeAdded;
+
+        public abstract void AddGrade(double grade);
+
+        public virtual Statistics GetStatistics()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    // Inheriting from the base class namedobject named object should be in another file but we can add an interface
+    // but if i want it in every book component, then i have to move it to the book class definition
+    public class InMemoryBook : Book
     {
         //passing the arguments from the base class and picking them from where they are parsed
-        public Book(string name) : base(name)
+        public InMemoryBook(string name) : base(name)
         {
             Name = name;
             grades = new List<double>();
@@ -58,7 +84,8 @@ namespace GradeBook
             }
         }
 
-        public void AddGrade(double grade)
+        //Override will overide every addgrade attributes in other classes
+        public override void AddGrade(double grade)
         {
             if (grade <=100 && grade >= 0)
             {
@@ -158,7 +185,6 @@ namespace GradeBook
 
         //This cant even be changed in the constructor;
         public const string CATEGORY = "Science";
-
     }
 
 }
