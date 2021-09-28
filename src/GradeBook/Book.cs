@@ -102,9 +102,9 @@ namespace GradeBook
         }
 
         //Adding a new memeber which is just a field
-        public event GradeAddDelegate GradeAdded;
+        public override event GradeAddDelegate GradeAdded;
 
-        public Statistics GetStatistics()
+        public override Statistics GetStatistics()
         {
             var result = new Statistics();
             result.Average = 0.0;
