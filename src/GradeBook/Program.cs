@@ -9,6 +9,7 @@ namespace GradeBook
         static void Main(string[] args)
         {
             var book = new Book("Jude");
+            book.GradeAdded += OnGradeAdded;
 
             var done = false;
 
@@ -50,6 +51,11 @@ namespace GradeBook
             //grades.Add(56.1);
 
             //var numbers = new double[] {12.4, 56.8, 56.3, 67.8, 21.9 };
+        }
+
+        static void OnGradeAdded(object sender, EventArgs e)
+        {
+            Console.WriteLine("Grade was added");
         }
     }
 }

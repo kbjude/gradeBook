@@ -5,6 +5,9 @@ namespace GradeBook
 {
     public class Book
     {
+        public delegate void GradeAddDelegate(object sender, EventArgs args);
+
+
         public Book(string name)
         {
             Name = name;
@@ -17,7 +20,6 @@ namespace GradeBook
             {
                 case 'A':
 
-                    AddGrade(90);
                     break;
 
                 case 'B':
@@ -46,12 +48,19 @@ namespace GradeBook
             if (grade <=100 && grade >= 0)
             {
                 grades.Add(grade);
+                if(GradeAdded !=null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
             }
             else
             {
                 throw new ArgumentException($"Invalid Grade {nameof(grade)}");
             }
         }
+
+        //Adding a new memeber which is just a field
+        public event GradeAddDelegate GradeAdded;
 
         public Statistics GetStatistics()
         {
